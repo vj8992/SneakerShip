@@ -1,0 +1,22 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+  id 'com.android.application' version '7.2.2' apply false
+  id 'com.android.library' version '7.2.2' apply false
+  id 'org.jetbrains.kotlin.android' version '1.7.10' apply false
+}
+
+//version constants
+ext {
+  supportLibVersion = '1.1.0'
+  coreVersion = '1.9.0'
+  materialVersion = '1.1.0'
+  lifecycleVersion = '2.2.0'
+  roomVersion = '2.4.3'
+  pagingVersion = '3.1.1'
+  navigationComponent  = '2.5.3'
+  coil = "0.11.0"
+}
+
+task clean(type: Delete) {
+  delete rootProject.buildDir
+}

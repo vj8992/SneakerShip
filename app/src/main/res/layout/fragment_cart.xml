@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+  <TextView
+      android:id="@+id/cart_details_tv"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="7dp"
+      android:gravity="center"
+      android:padding="8dp"
+      android:text="@string/order_details"
+      android:textColor="@color/purple_700"
+      android:textSize="22sp"
+      android:textStyle="bold"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/cart_rv"
+      />
+
+  <TextView
+      android:id="@+id/sub_total_tv"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="7dp"
+      android:gravity="center"
+      android:padding="5dp"
+      android:textColor="@color/purple_700"
+      android:textSize="18sp"
+      android:textStyle="bold"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/cart_details_tv"
+      tools:text="Rs 7000"
+      />
+
+  <TextView
+      android:id="@+id/tax_total_tv"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="7dp"
+      android:gravity="center"
+      android:padding="5dp"
+      android:textColor="@color/purple_700"
+      android:textSize="18sp"
+      android:textStyle="bold"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/sub_total_tv"
+      tools:text="Rs 7000"
+      />
+
+  <TextView
+      android:id="@+id/total_tv"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:padding="5dp"
+      android:textColor="@color/purple_700"
+      android:textSize="18sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toBottomOf="@+id/check_out_btn"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toLeftOf="@+id/check_out_btn"
+      app:layout_constraintTop_toTopOf="@+id/check_out_btn"
+      tools:text="Rs 7000"
+      />
+
+  <TextView
+      android:id="@+id/empty_tv"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:gravity="center"
+      android:padding="8dp"
+      android:text="@string/empty_cart"
+      android:textColor="@color/purple_700"
+      android:textSize="22sp"
+      android:textStyle="bold"
+      android:visibility="gone"
+      />
+
+  <androidx.constraintlayout.widget.Group
+      android:id="@+id/main_group"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:constraint_referenced_ids="cart_rv,cart_details_tv,tax_total_tv,total_tv,sub_total_tv,check_out_btn"
+      />
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/cart_rv"
+      android:layout_width="match_parent"
+      android:layout_height="300dp"
+      android:padding="15dp"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      />
+
+  <com.google.android.material.button.MaterialButton
+      android:id="@+id/check_out_btn"
+      android:layout_width="wrap_content"
+      android:layout_height="50dp"
+      android:layout_marginTop="10dp"
+      android:text="@string/check_out"
+      app:layout_constraintLeft_toRightOf="@+id/total_tv"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tax_total_tv"
+      app:cornerRadius="5dp"
+      />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

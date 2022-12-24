@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+  <ImageView
+      android:id="@+id/sneaker_iv"
+      android:layout_width="match_parent"
+      android:layout_height="200dp"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      />
+
+  <TextView
+      android:id="@+id/name_tv"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="7dp"
+      android:gravity="center"
+      android:padding="8dp"
+      android:textColor="@color/purple_700"
+      android:textSize="22sp"
+      android:textStyle="bold"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/sneaker_iv"
+      tools:text="Nike"
+      />
+
+  <TextView
+      android:id="@+id/details_tv"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="7dp"
+      android:gravity="center"
+      android:padding="5dp"
+      android:textColor="@color/purple_700"
+      android:textSize="14sp"
+      android:textStyle="italic|bold"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/name_tv"
+      tools:text="Nike"
+      />
+
+  <TextView
+      android:id="@+id/release_date_tv"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="7dp"
+      android:gravity="center"
+      android:padding="5dp"
+      android:textColor="@color/purple_700"
+      android:textSize="18sp"
+      app:layout_constraintLeft_toRightOf="@+id/color_tv"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/details_tv"
+      tools:text="Nike"
+      />
+
+  <TextView
+      android:id="@+id/color_tv"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="7dp"
+      android:gravity="center"
+      android:padding="5dp"
+      android:textColor="@color/purple_700"
+      android:textSize="18sp"
+      android:textStyle="bold"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toLeftOf="@+id/price_tv"
+      app:layout_constraintTop_toBottomOf="@+id/release_date_tv"
+      tools:text="Nike"
+      />
+
+  <TextView
+      android:id="@+id/price_tv"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="7dp"
+      android:gravity="center"
+      android:padding="5dp"
+      android:textColor="@color/purple_700"
+      android:textSize="18sp"
+      android:textStyle="bold"
+      app:layout_constraintLeft_toRightOf="@+id/color_tv"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/release_date_tv"
+      tools:text="Rs 7000"
+      />
+
+  <com.google.android.material.button.MaterialButton
+      android:id="@+id/add_to_cart_btn"
+      android:layout_width="wrap_content"
+      android:layout_height="50dp"
+      android:text="@string/add_to_cart"
+      android:layout_marginTop="10dp"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/price_tv"
+      app:cornerRadius="5dp"
+      />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
